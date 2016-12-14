@@ -1,24 +1,23 @@
+import { HerosModule } from './heroes/heroes.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import {AppRoutingModule} from './app-routing.module'
-import {HeroListComponent} from './hero-list.component'
-import {CrisisListComponent} from './crisis-list.component'
+import {AppRoutingModule} from './app-routing.module';
+import {CrisisListComponent} from './crisis-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroListComponent,
     CrisisListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HerosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
