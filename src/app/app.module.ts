@@ -4,14 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import {CrisisListComponent} from './crisis-list.component';
-import {HeroListComponent} from './hero-list.component';
-
-
-const appRoutes: Routes = [
-  { path: 'crisis-center', component: CrisisListComponent },
-  { path: 'heroes', component: HeroListComponent }
-];
+import {AppRoutingModule} from './app-routing.module'
+import {HeroListComponent} from './hero-list.component'
+import {CrisisListComponent} from './crisis-list.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +18,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
